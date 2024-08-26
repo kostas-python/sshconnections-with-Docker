@@ -57,11 +57,12 @@ Copy code
 #!/bin/bash
 
 # SSH to the first Docker container
-ssh user@172.17.0.2
+ssh root@172.17.0.2
 
 # SSH to the second Docker container (replace with actual IP)
-ssh user@<second_container_ip>
-Replace user with the appropriate SSH username and <second_container_ip> with the IP address of the second container.
+ssh root@172.17.0.3
+
+Password to connect to containers 123456
 
 Troubleshooting
 Connection Issues: If you encounter connection issues, verify that the Docker containers are running and accessible. Check the container IP addresses with docker inspect.
