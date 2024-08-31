@@ -1,0 +1,31 @@
+docker pull debian    pull debian image 
+
+docker images   check images
+
+mkdir sshconnections
+
+docker run -it --name container1 debian    creates container
+
+apt-get update AND apt-get install openssh-server
+
+apt-get install nano     configure ssh 
+
+nano /etc/ssh/sshd_config  --> uncomment permitrootlogin to yes
+
+service --status-all THEN service ssh start
+
+create container2, apt-get update, apt-get install openssh-client
+
+Project1 --> docker start container1
+docker exec -it container1 bash  --> go to container1 
+
+passwd root --> add password
+
+docker inspect container1 | grep IPAddress
+
+docker start container2 THEN docker exec -it container1 bash
+
+ssh@root(and the IP of container1)  *check ssh server container1 started*
+
+Done
+
